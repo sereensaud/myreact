@@ -13,6 +13,7 @@ function App() {
       <h3>npx create-react-app myreact</h3>
       <h3>cd myreact</h3>
       <h3>npm start</h3>
+      <h2>yaayy!deployment worked :)</h2>
     </div>
   );
 }
