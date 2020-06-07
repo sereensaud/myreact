@@ -26,13 +26,15 @@ jobs:
       uses: actions/setup-node@v2-beta
       with: 
         node-version: 12
-
-    - uses: borales/actions-yarn@v2.0.0
+   
+    - name: GitHub Action for Yarn
+      uses: Borales/actions-yarn@v2.1.0
       with:
-          cmd:npm install --global yarn# will run `yarn install` command
-    - name: install yarn
+        # Yarn command
+        cmd: install # npm install/ yarn install
+    
+    - name: Creating build
       run: yarn build
-      
     - name: Install SURGE
       run: npm i -g surge
       
