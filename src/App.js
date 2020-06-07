@@ -5,20 +5,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>THIS IS MY FIRST REACT APP!
+      </h1>
+      <h2>i made it running following commands on cmd</h2>
+      <h3>npm install --global create-react-app
+      </h3>
+      <h3>npx create-react-app myreact</h3>
+      <h3>cd myreact</h3>
+      <h3>npm start</h3>
     </div>
   );
 }
