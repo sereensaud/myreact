@@ -4,11 +4,19 @@ import './App.css';
 
 
 function App() {
-return(<div>
-  sereen is 
-   <Dinner WHAT="very sweet girl"></Dinner> <hr></hr>
-   <Dinner WHAT="very sweet girl"></Dinner> </div>
+  let name =["sereen","saud"]
+  let age = [18,279];
+  let extra=["and i m not cool at all"]
+return(
+<div>
+   
+   <Dinner name={name[0]} age={age[0]} extra="verycool"></Dinner>
+   <Dinner name={name[1]} age={age[1]}extra={extra}></Dinner>
+   
+</div>
    )   
 }
 
 export default App;
+
+
