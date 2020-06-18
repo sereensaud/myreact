@@ -1,18 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Dinner from './dinner.js'
 import './App.css';
 
 
 function App() {
-  let name =["sereen","saud"]
-  let age = [18,279];
-  let extra=["and i m not cool at all"]
+
+   const [light, setLight]  = useState(true);
+   const [temp, setTemp]  = useState(22);
+   
+  
 return(
 <div>
+   <div  className =  {light? "on": "off"} >
+          THE ROOM LIGHT IS: 
+          <br></br>
+          <br></br>
+          <button onClick={ 
+             ()=>{
+             setLight(true);            }
+         }>ON</button>
+         
+
+         <button onClick={ 
+             ()=>{
+             setLight(false);            }
+         }>OFF</button>
+
+   </div>
    
-   <Dinner name={name[0]} age={age[0]} extra="verycool"></Dinner>
-   <Dinner name={name[1]} age={age[1]}extra={extra}></Dinner>
-   
+   <div class="temp" >
+          TEMPERATURE IS: {temp}
+          <br></br>
+          <br></br>
+          <button onClick={ 
+             ()=>{
+             setTemp(temp+1);            }
+         }>+</button>
+         
+
+         <button onClick={ 
+             ()=>{
+             setTemp(temp-1);            }
+         }>-</button>
+           
+   </div>
 </div>
    )   
 }
