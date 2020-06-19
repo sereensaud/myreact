@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Dinner from './dinner.js'
 import './App.css';
 
 
@@ -28,7 +27,7 @@ return(
 
    </div>
    
-   <div class="temp" >
+   <div class = "temp">
           TEMPERATURE IS: {temp}
           <br></br>
           <br></br>
