@@ -1,50 +1,23 @@
 import React, {useState} from 'react';
 import './App.css';
+import Parent from './Parent';
+import CounterContext from './CounterContext';
 
 
-function App() {
 
-   const [light, setLight]  = useState(true);
-   const [temp, setTemp]  = useState(22);
-   
-  
-return(
+function App()
+{
+   // for updating parents state we are doing this using hooks useState
+   let  countState = useState(1) //array do cheezon ki ab 1 krdia to counter yehi se start hoga 
+  // let [count, setCount] = useState(25) // ye same ha upar wale se wo ik array ban gai hai
+
+   return(
+   <CounterContext.Provider value={countState} > {/*ab value 25 dega */} 
 <div>
-   <div  className =  {light? "on": "off"} >
-          THE ROOM LIGHT IS: 
-          <br></br>
-          <br></br>
-          <button onClick={ 
-             ()=>{
-             setLight(true);            }
-         }>ON</button>
-         
-
-         <button onClick={ 
-             ()=>{
-             setLight(false);            }
-         }>OFF</button>
-
-   </div>
-   
-   <div class = "temp">
-          TEMPERATURE IS: {temp}
-          <br></br>
-          <br></br>
-          <button onClick={ 
-             ()=>{
-             setTemp(temp+1);            }
-         }>+</button>
-         
-
-         <button onClick={ 
-             ()=>{
-             setTemp(temp-1);            }
-         }>-</button>
-           
-   </div>
+<Parent  />
 </div>
-   )   
+</CounterContext.Provider> // umbrealla bna dia upar default value bhi dedi..
+   );   
 }
 
 export default App;
